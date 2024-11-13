@@ -3,6 +3,16 @@ name =input("what is your name\n")
 print("\nHello " +name+ " welcome to our coffee shop " )
 menu= "black coffee,latte,espresso,ice coffee"
 order=input("\n\nwhat would you like to order here is what we are serving today\n" +menu+ "\n")
-sugar=input("\ndo you want with sugar or no sugar\n")
-extra=input ("Do you want anythying on the side we have all kinds of dounts \n")
-print("sounds good " +name+ " we will have your " + order + " with " + sugar + " and " +extra+" ready for you  in just a moment")
+quantity=input("how many do you want?\n")
+if order== "ice coffee":
+   price = 9
+elif order =="espresso":
+    price =7
+elif order =="latte":
+    cream= input("Do you want whipped cream?\n")
+    if cream == "yes" :
+    	price = 8
+    else : price = 5
+   
+total= price* int(quantity)
+print("sounds good " +name+ " the total will be "+str(total)+"EGP and we will have your " + quantity+" "+order + " ready for you  in just a moment")
